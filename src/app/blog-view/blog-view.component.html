@@ -8,7 +8,7 @@
           </h5>
           <p class="card-text">Posted by Author:{{currentBlog.author}} on {{currentBlog.created}}</p>
           <p class="card-text">Catagory:{{currentBlog.catagory}}</p>
-          <p class="card-text">{{currentBlog.bodyHtml}}</p>
+          <p class="card-text" [innerHtml]="currentBlog.bodyHtml"></p>
         </div>
         <hr>
         <div class="card-footer text-muted">

@@ -3,7 +3,8 @@ import { NgModule } from '@angular/core';
 
 // *******
 import { RouterModule, Routes } from '@angular/router';
-
+// services
+import { BlogService } from './blog.service';
 // <components>
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
@@ -37,7 +38,7 @@ import { NotFoundComponent } from './not-found/not-found.component';
       { path: '**', component: NotFoundComponent }
     ])
   ],
-  providers: [],
+  providers: [BlogService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
