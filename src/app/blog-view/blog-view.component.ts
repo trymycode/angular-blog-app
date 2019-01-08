@@ -55,6 +55,8 @@ export class BlogViewComponent implements OnInit {
     console.log("ngoninit called from blog-viewAttached.com.ts");
     let myBlogId = this._route.snapshot.paramMap.get('blogId');
     console.log(myBlogId);
+    // calling the getSingleBlogInformation function
+    this.getSingleBlogInformation(myBlogId);
   }
   public getSingleBlogInformation(currentBlogId):any{
     for(let blog of this.allBlogs){
