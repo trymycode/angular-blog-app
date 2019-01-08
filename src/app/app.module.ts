@@ -1,6 +1,10 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+
+// *******
 import { RouterModule, Routes } from '@angular/router';
+
+// <components>
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { BlogViewComponent } from './blog-view/blog-view.component';
