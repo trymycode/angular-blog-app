@@ -25,7 +25,8 @@ errorHandler(error: HttpErrorResponse){
   return throwError(error);
 }
 // method to get a particular blog
-// public getSingleBlogInformation(currentBlogId):any{
-
-// }
+public getSingleBlogInformation(currentBlogId):any{
+  let myResponse = this._http.get(this.baseUrl+'/view'+ '/'+ currentBlogId +'?authToken=ZGYzNGQxY2RhZGJjMjM2ZTQ1ZDUwNTE4M2UyYmE3ZGFhN2VkOTYyZmU4N2Q5NWY0MmQ0ZGNmNDNhODdhODI4ZWYyOTI5NTJhMDhiODU4YmY5ZjRlZDkzZWQ0ZGUxMDhmMDU4YmI0N2ZjZmI2MDFhOTdjOTdjNmE3NzUxYzZhZTU0MTQz');
+  return myResponse;
+}
 }
