@@ -1,7 +1,9 @@
+import { BlogHttpService } from './../blog-http.service';
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
-import { viewAttached } from '@angular/core/src/render3/instructions';
+// import { viewAttached } from '@angular/core/src/render3/instructions';
 import { BlogService } from '../blog.service';
+
 @Component({
   selector: 'app-blog-view',
   templateUrl: './blog-view.component.html',

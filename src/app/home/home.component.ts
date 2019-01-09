@@ -20,7 +20,7 @@ export class HomeComponent implements OnInit {
       },
       error =>{
         console.log("Some error occured");
-        console.log(error);
+        console.log("Error!"+ error);
       }
       
     )
