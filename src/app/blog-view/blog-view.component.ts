@@ -27,5 +27,22 @@ export class BlogViewComponent implements OnInit {
     )
     
   }
+  public deleteThisBlog(){
+    this.blogHttpService.deleteBlog(this.currentBlog.blogId).subscribe(
+      data => {
+        console.log("Blog deleted");
+        console.log(data);
+        alert("Blog deleted successfully!");
+        setTimeout(()=>{
+          this.router.navigate(['/home']);
+        },1000);
+      },
+      error => {
+        console.log("Some error occured");
+        console.log(error);
+        alert("Some error occured");
+      }
+    )
+ } 
  
 }
