@@ -3,8 +3,10 @@ import { NgModule } from '@angular/core';
 
 // *******
 import { RouterModule, Routes } from '@angular/router';
+import { HttpClientModule } from '@angular/common/http';
 // services
 import { BlogService } from './blog.service';
+import { BlogHttpService } from './blog-http.service';
 // <components>
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
@@ -28,6 +30,7 @@ import { NotFoundComponent } from './not-found/not-found.component';
   ],
   imports: [
     BrowserModule,
+    HttpClientModule,
     RouterModule.forRoot([
       { path: 'home', component: HomeComponent },
       { path: '', redirectTo: 'home', pathMatch: 'full' },
@@ -36,9 +39,10 @@ import { NotFoundComponent } from './not-found/not-found.component';
       { path: 'create', component: PostBlogComponent },
       { path: 'edit/:blogId', component: BlogEditComponent },
       { path: '**', component: NotFoundComponent }
-    ])
+    ]
+    )
   ],
-  providers: [BlogService],
+  providers: [BlogService,BlogHttpService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -50,7 +50,7 @@ export class BlogService {
   constructor() {
     console.log("blog.service constructor method is called");
    }
-  //  method to return allblogs;
+  // //  method to return allblogs;
   public getAllBlogs(){
      return this.allBlogs;
   }
